@@ -1,0 +1,268 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;/*to hide the scroll property(scroll bar)*/
+}
+.main{
+    display: flex;
+    height: 100vh;/*100% of screen */
+     padding: 0.5rem;
+}
+.sidebar{
+    background-color: black;
+    width: 340px;
+    border-radius: 1rem;/*16 px*/
+    margin: 0.5rem;
+
+
+}
+.main-content{
+    background-color: #121212;
+    flex: 1;/*takes all the width left out there after assigning to others*/
+    border-radius: 1rem;/*16 px*/
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+   background-color:black;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 72px;
+
+}
+a{
+    text-decoration: none;
+    color: #fff ;
+}
+.nav{
+   background-color: #121212; 
+   border-radius: 1rem;
+   display: flex ;
+   flex-direction: column;/* to align divs horizontal*/
+   justify-content: center;
+   height: 100px;
+   padding: 0.5rem 0.75rem;
+     
+}
+.nav-option{
+    line-height: 2.5rem;/*setting height to one line*/
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+} 
+.nav-option i{
+    font-size: 1.25rem;/*icon size*/
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;     
+}
+.icons{
+    font-size: 1.35rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1.25rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+/*Main content*/
+.sticky-nav{
+    position: sticky;/*sticks to there position*/
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem;
+    z-index: 10;/*to hide all text behind sticky nav*/
+}
+.sticky-nav-icons{
+   margin-left: 0.75rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+} 
+/*To hide or remove the forward icon and explore premium option till 1000px*/
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+  background-color: #232323;  
+  width:150px;
+  border-radius:0.5rem;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;/*to display the cards on the next line*/
+}
+.card-img{
+   width:100%;
+   border-radius:0.5rem;
+}
+.card-title{
+    font-weight:600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+.footer{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.music-player{
+    display: flex;
+}
+.album{
+    width: 25%;
+
+}
+.player{
+    width: 50%;
+}
+.controlls{
+    width: 25%;
+}
+.player-controls{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity:1 ;
+}
+.playback-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;/* used to remove the by default value of any components*/
+    background-color: transparent;
+    cursor: pointer;/*To make cursor as hand like symbol when we hover on it*/ 
+}
+/*pseoud element to costmize track*/
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius:100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.playing1{
+display: flex;
+justify-content: space-between;
+align-items:center;
+}
+.playing img{
+    border: solid black;
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.control-icon{
+    height: 1.1rem;
+    margin-right: 1.75rem;
+    
+}
+.control-icon1{
+    height: 1.8rem;
+    margin-right: 1.75rem;
+    opacity: 0.99; 
+}
+@media (max-width:535px){
+    .hide1{
+        display: none;
+    }
+}
