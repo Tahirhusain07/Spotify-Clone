@@ -189,6 +189,11 @@ a{
     width: 25%;
 
 }
+@media (max-width:590px){
+    .player{
+        margin-left: 6.1rem;
+    }
+}
 .player{
     width: 50%;
 }
