@@ -155,12 +155,6 @@ a{
   margin-left: 1.5rem;
   margin-top: 1rem;
 }
-@media (max-width:475px){
-    .card{
-        width: 80px;
-       
-    }
-}
 .cards-container{
     display: flex;
     flex-wrap: wrap;/*to display the cards on the next line*/
@@ -275,5 +269,11 @@ align-items:center;
 @media (max-width:535px){
     .hide1{
         display: none;
+    }
+}
+@media (max-width:475px){
+    .card{
+        width: 80px;
+       
     }
 }
